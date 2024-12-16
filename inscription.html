@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr" class="No-JS">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Inscription | Maelys-imo</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons >
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"-->
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+  <!-- site icon -->
+  <link rel="icon" href="pluto-1.0.0/images/fevicon.png" type="image/png" />
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="pluto-1.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="pluto-1.0.0/assets/vendor/bootstrap-icons/bootstrap-icons.css">
+  <!-- site css -->
+  <link rel="stylesheet" href="pluto-1.0.0/style.css" />
+  <!-- responsive css -->
+  <link rel="stylesheet" href="pluto-1.0.0/css/responsive.css" />
+  <!-- color css -->
+  <link rel="stylesheet" href="pluto-1.0.0/css/colors.css" />
+  <!-- select bootstrap -->
+  <link rel="stylesheet" href="pluto-1.0.0/css/bootstrap-select.css" />
+  <!-- scrollbar css -->
+  <link rel="stylesheet" href="pluto-1.0.0/css/perfect-scrollbar.css" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="pluto-1.0.0/css/custom.css" />
+  <!-- calendar file css -->
+  <link rel="stylesheet" href="pluto-1.0.0/js/semantic.min.css" />
+
+</head>
+<body class="inner_page login">
+  <div class="full_container" style="width: 70%; margin: 50px auto; overflow: hidden;">
+    <!-- Retour à l'accueil -->
+    
+    <div class="field margin_0" style="margin-bottom: 20px; background-color: #ffff; border-radius: 10px 10px 0 0;">
+      <a href="/pluto-1.0.0/login.html">
+         <button class="main_bt"><i class="bi bi-arrow-left"></i> Revenir</button>
+      </a>
+   </div>
+
+    <!-- Logo (centré et collé comme dans l'autre formulaire) -->
+    <div class="logo_login" style="text-align: center; margin: 0;">
+      <div class="center" style="margin: 0; padding: 0;">
+        <img width="210" src="assets/img/in.png" alt="Logo" style="margin: 0;">
+      </div>
+    </div>
+  
+
+    <!-- Formulaire -->
+    <form style="background: #ffff; padding: 30px; border-radius: 0 0 10px 10px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);">
+      <!-- Champ de sélection -->
+      <div class="field" style="margin-bottom: 20px;">
+        <label style="font-weight: bold; margin-bottom: 8px; display: block;">Êtes-vous Propriétaire ou une Agence?</label>
+        <select name="role" id="role" required style="width: 100%; padding: 10px; border-top: none; border-left: solid #ddd 2px; border-right: none; border-bottom: solid #ddd 2px; border-radius: 4px;">
+          <option>---Selectionner une option---</option>
+          <option value="Propriétaire">Propriétaire</option>
+          <option value="Agence">Agence</option>
+        </select>
+      </div>
+      
+      <script>
+        // Fonction pour gérer l'affichage des champs
+        document.getElementById('role').addEventListener('change', function () {
+          const agencyFields = document.getElementById('agencyFields');
+          if (this.value === 'Agence') {
+            agencyFields.style.display = 'block';
+          } else {
+            agencyFields.style.display = 'none';
+          }
+        });
+      </script>
+      
+      <!-- Champs alignés 2 par 2 -->
+      <!-- Champs spécifiques à l'agence -->
+      <div id="agencyFields" style="display: none;">
+        <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+          <div style="width: 50%;">
+            <label style="font-weight: bold; margin-bottom: 8px; display: block;">Nom de l'Agence*</label>
+            <input type="text" name="Nomagc" placeholder="Nom Agence" required style="width: 100%; padding: 10px; border-top: none; border-left: solid #ddd 2px; border-right: none; border-bottom: solid #ddd 2px; border-radius: 4px;">
+          </div>
+          <div style="width: 50%;">
+            <label style="font-weight: bold; margin-bottom: 8px; display: block;">Poste Occupé*</label>
+            <input type="text" name="post" placeholder="Votre poste" required style="width: 100%; padding: 10px; border-top: none; border-left: solid #ddd 2px; border-right: none; border-bottom: solid #ddd 2px; border-radius: 4px;">
+          </div>
+        </div>
+    
+        <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+          <div style="width: 50%;">
+            <label style="font-weight: bold; margin-bottom: 8px; display: block;">Localisation*</label>
+            <input type="text" name="loca" placeholder="Ou est située l'Agence" required style="width: 100%; padding: 10px; border-top: none; border-left: solid #ddd 2px; border-right: none; border-bottom: solid #ddd 2px; border-radius: 4px;">
+          </div>
+          <div style="width: 50%;">
+            <label style="font-weight: bold; margin-bottom: 8px; display: block;">Contact de l'agence*</label>
+            <input type="text" name="contagc" placeholder="Contact Agence" required style="width: 100%; padding: 10px; border-top: none; border-left: solid #ddd 2px; border-right: none; border-bottom: solid #ddd 2px; border-radius: 4px;">
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+        <div style="width: 50%;">
+          <label style="font-weight: bold; margin-bottom: 8px; display: block;">Nom*</label>
+          <input type="text" name="Nom" placeholder="Nom" required style="width: 100%; padding: 10px; border-top: none; border-left: solid #ddd 2px; border-right: none; border-bottom: solid #ddd 2px; border-radius: 4px;">
+        </div>
+        <div style="width: 50%;">
+          <label style="font-weight: bold; margin-bottom: 8px; display: block;">Prénom*</label>
+          <input type="text" name="Prénom" placeholder="Prénom" required style="width: 100%; padding: 10px; border-top: none; border-left: solid #ddd 2px; border-right: none; border-bottom: solid #ddd 2px; border-radius: 4px;">
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+        <div style="width: 50%;">
+          <label style="font-weight: bold; margin-bottom: 8px; display: block;">Adresse</label>
+          <input type="text" name="Adresse" placeholder="Adresse" style="width: 100%; padding: 10px; border-top: none; border-left: solid #ddd 2px; border-right: none; border-bottom: solid #ddd 2px; border-radius: 4px;">
+        </div>
+        <div style="width: 50%;">
+          <label style="font-weight: bold; margin-bottom: 8px; display: block;">Code Postal</label>
+          <input type="text" name="Code Postal" placeholder="Code Postal" style="width: 100%; padding: 10px; border-top: none; border-left: solid #ddd 2px; border-right: none; border-bottom: solid #ddd 2px; border-radius: 4px;"">
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+        <div style="width: 50%;">
+          <label style="font-weight: bold; margin-bottom: 8px; display: block;">Adresse Email*</label>
+          <input type="email" name="email" placeholder="E-mail" required style="width: 100%; padding: 10px; border-top: none; border-left: solid #ddd 2px; border-right: none; border-bottom: solid #ddd 2px; border-radius: 4px;">
+        </div>
+        <div style="width: 50%;">
+          <label style="font-weight: bold; margin-bottom: 8px; display: block;">Téléphone*</label>
+          <input type="tel" name="tel" placeholder="+225 1234567890" required style="width: 100%; padding: 10px; border-top: none; border-left: solid #ddd 2px; border-right: none; border-bottom: solid #ddd 2px; border-radius: 4px;">
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+        <div style="width: 50%;">
+          <label style="font-weight: bold; margin-bottom: 8px; display: block;">Mot de Passe*</label>
+          <input type="password" name="password" placeholder="Mot de Passe" required style="width: 100%; padding: 10px; border-top: none; border-left: solid #ddd 2px; border-right: none; border-bottom: solid #ddd 2px; border-radius: 4px;">
+        </div>
+        <div style="width: 50%;">
+          <label style="font-weight: bold; margin-bottom: 8px; display: block;">Confirmer Mot de Passe*</label>
+          <input type="password" name="confirm_password" placeholder="Confirmer" required style="width: 100%; padding: 10px; border-top: none; border-left: solid #ddd 2px; border-right: none; border-bottom: solid #ddd 2px; border-radius: 4px;">
+        </div>
+      </div>
+
+      <!-- Champ pour la photo -->
+      <div class="field" style="margin-bottom: 20px;">
+          <label style="font-weight: bold; margin-bottom: 8px; display: block;">Ajouter votre photo ou logo*</label>
+          <label for="file" class="custum-file-upload">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z" fill=""></path> </g></svg>
+            </div>
+            <div class="text">
+              <span>Click to upload image</span>
+            </div>
+            <input id="file" type="file" class="input">
+          </label>
+        
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+        <input type="hidden" name="_template" value="table">
+      </div>
+
+      <!-- Bouton de soumission -->
+      <div class="field margin_0">
+        <button type="submit" class="main_bt" style="width: 100%; padding: 15px; border-radius: 4px;">S'Inscrire</button>
+     </div>
+    </form>
+  </div>
+
+</body>
+</html>
